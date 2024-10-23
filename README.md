@@ -2,6 +2,27 @@
 
 > For more of my projects and data journey, visit my [Portfolio](https://ruizdelcarmen.me/).
 
+<details>
+<summary>Table of Contents</summary>
+
+- [Project Background](#project-background)
+- [Executive Summary](#executive-summary)
+- [Insights Deep-Dive](#insights-deep-dive)
+    - [Sales Trends and Growth Rates](#sales-trends-and-growth-rates)
+    - [Key Product Performance](#key-product-performance)
+    - [Loyalty Program Performance](#loyalty-program-performance)
+    - [Sales by Platforms & Channels](#sales-by-platforms--channels)
+    - [Refund Rate Trends](#refund-rate-trends)
+- [Actionable Recommendations](#actionable-recommendations)
+    - [Maximizing Product Offerings](#maximizing-product-offerings)
+    - [Loyalty Program Enhancements](#loyalty-program-enhancements)
+    - [Maintaining Low Refund Rates](#maintaining-low-refund-rates)
+    - [Optimizing Channels and Platforms](#optimizing-channels-and-platforms)
+    - [Regional Growth Strategies](#regional-growth-strategies)
+- [Assumptions and Caveats](#assumptions-and-caveats)
+
+</details>
+
 ## Project Background
 
 ByteX, a global e-commerce company founded in 2018, specializes in selling popular electronics like Apple, Samsung, and ThinkPad products. Despite rapid growth, their core datasets—orders, customers, and products—are disorganized, leaving valuable insights unexplored. As a data analyst, I’m partnering with the Head of Operations to extract insights and deliver recommendations to improve performance across finance, sales, product, and marketing teams.
@@ -57,58 +78,49 @@ Refund rates for high-ticket items peaked during the early pandemic but have sin
 
 ### Maximizing Product Offerings
 
-> Monitors, AirPods, and laptops dominate sales and perform consistently across all regions.
+Monitors, AirPods, and laptops dominate sales and perform consistently across all regions.
+- **Recommendation**: Expand catalogue variations in these categories to meet diverse customer needs, such as different screen sizes or premium models, to drive repeat purchases and strengthen market presence.
 
-**Recommendation**: Expand catalogue variations in these categories to meet diverse customer needs, such as different screen sizes or premium models, to drive repeat purchases and strengthen market presence.
+The Samsung Cable Pack makes up 20% of orders but only 2% of revenue, highlighting an opportunity for optimization.
+- **Recommendation**: Reevaluate pricing, bundle with high-value items, or offer as a promotional gift to boost average order value (AOV).
 
-> The Samsung Cable Pack makes up 20% of orders but only 2% of revenue, highlighting an opportunity for optimization.
-
-**Recommendation**: Reevaluate pricing, bundle with high-value items, or offer as a promotional gift to boost average order value (AOV).
-***
 ### Loyalty Program Enhancements
 
-> While ByteX attracts new buyers, loyalty member conversion has been inconsistent and downward trends in program performance after 2020.
+While ByteX attracts new buyers, loyalty member conversion has been inconsistent and downward trends in program performance after 2020.
 
-**Recommendation**: Use targeted onboarding campaigns offering first-purchase discounts or early access. Tiered rewards can incentivize frequent purchases and improve retention. **Continuously monitor these metrics before making any final decisions on the program’s future, allowing for data-driven refinements.**
-***
+- **Recommendation**: Use targeted onboarding campaigns offering first-purchase discounts or early access. Tiered rewards can incentivize frequent purchases and improve retention. **Continuously monitor these metrics before making any final decisions on the program’s future, allowing for data-driven refinements.**
+
 ### Maintaining Low Refund Rates
 
-> In 2021, refund rates dropped significantly, aligning with customer expectations.
+In 2021, refund rates dropped significantly, aligning with customer expectations.
 
-**Recommendation**: Replicate successful practices from that period; product descriptions, quality control, or post-purchase support to maintain this trend.
-***
+- **Recommendation**: Replicate successful practices from that period; product descriptions, quality control, or post-purchase support to maintain this trend.
+
 ### Optimizing Channels and Platforms
 
-> Affiliate marketing offers high AOV but accounts for only 3% of sales, holding untapped potential.
+Affiliate marketing offers high AOV but accounts for only 3% of sales, holding untapped potential.
+- **Recommendation**: Expand affiliate partnerships or increase commissions to attract influential marketers, boosting brand reach and AOV.
 
-**Recommendation**: Expand affiliate partnerships or increase commissions to attract influential marketers, boosting brand reach and AOV.
+The website remains the highest-grossing sales channel, but the mobile app lags behind.
+- **Recommendation**:  If resources permit, improve the mobile app experience by simplifying checkout, personalizing the experience. With mobile usage trends increasing, these adjustments could increase its contribution to total sales.
 
-> The website remains the highest-grossing sales channel, but the mobile app lags behind.
-
-**Recommendation**:  If resources permit, improve the mobile app experience by simplifying checkout, personalizing the experience. With mobile usage trends increasing, these adjustments could increase its contribution to total sales.
-***
 ### Regional Growth Strategies
 
-> North America and EMEA generate 80% of sales, making them critical markets for sustained growth. However, regions like APAC and LATAM show potential despite their volatility.
+North America and EMEA generate 80% of sales, making them critical markets for sustained growth. However, regions like APAC and LATAM show potential despite their volatility.
 
-**Recommendation**:
-- Continue to focus resources on North America and EMEA through regionalized marketing campaigns and ensure product availability aligns with local consumer preferences.
+- **Recommendations**:
+    - Continue to focus resources on North America and EMEA through regionalized marketing campaigns and ensure product availability aligns with local consumer preferences.
+    - For APAC and LATAM, consider leveraging localized partnerships or promotions that speak to the cultural and economic conditions of each region. These markets may require more tailored approaches, but with the right strategies, ByteX can capture their growth potential and stabilize sales performance.
 
-- For APAC and LATAM, consider leveraging localized partnerships or promotions that speak to the cultural and economic conditions of each region. These markets may require more tailored approaches, but with the right strategies, ByteX can capture their growth potential and stabilize sales performance.
 
 ## Assumptions and Caveats
 
 - No recorded refunds for the entire year of 2022, which appears unusual and may warrant further investigation.
-
 - There is a deterministic relationship between marketing channel and account creation method, with each marketing channel tied exclusively to a specific account creation method. This lack of variation may need attention from the data engineering team.
-
 - I am unsure of how the loyalty program variable relate to the specific order record. Is the loyalty program variable tied to the user's account, or to the specific order itself? Is it possible for a user to be a loyalty member for one order and not for another? This would affect the accuracy of the loyalty program performance metrics.
-
 - Direct and email marketing drive the majority of sales, but I am unsure of how exactly these relate to the loyalty program further because of the seemingly deterministic relationship of *a channel* to *an account* to *an order*.
     - Assuming that the marketing channel is truly the way the customer opened the site to make a purchase, the email channel has the highest loyalty member rate at 58%, while the direct channel has the highest loyalty member count at 32,906 (72% of all loyalty members). 
-
-        > This would give us a hint as to which channels to hone in on to ensure loyalty program success moving forward.
-
+        - This would give us a hint as to which channels to hone in on to ensure loyalty program success moving forward.
 - With this, these are the columns I would pursue clarity on by asking the relevant teams:
     - `marketing_channel` and `account_creation_method` in the `customers` table
         - How is this recorded and what does it represent exactly in the context of the data? 
