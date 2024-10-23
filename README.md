@@ -25,11 +25,11 @@
 
 ## Project Background
 
-ByteX, a global e-commerce company founded in 2018, specializes in selling popular electronics like Apple, Samsung, and ThinkPad products. Despite rapid growth, their core datasets—orders, customers, and products—are disorganized, leaving valuable insights unexplored. As a data analyst, I’m partnering with the Head of Operations to extract insights and deliver recommendations to improve performance across finance, sales, product, and marketing teams.
+ByteX, a global e-commerce company founded in 2018, specializes in selling popular electronics like Apple, Samsung, and ThinkPad products. I’m partnering with the Head of Operations to extract insights and deliver recommendations to improve performance across sales, product, and marketing teams.
 
 ## Executive Summary
 
-This analysis of 108,000 ByteX orders from 2019 to 2022 reveals key trends to inform strategic actions. ByteX averaged $7 million in annual sales, with a sharp 2020 pandemic surge, followed by a 45% decline by 2022, stabilizing above pre-pandemic levels. North America and EMEA remain the strongest markets, contributing 80% of sales, while APAC and LATAM showed volatility despite rapid growth in 2020. Laptop sales, particularly MacBooks and ThinkPads, surged during the pandemic but have since slowed. The loyalty program has boosted customer engagement and revenue but has lost momentum post-pandemic.
+This analysis of 108,000 ByteX orders from 2019 to 2022 reveals key trends to inform strategic actions post-pandemic. ByteX averaged $7 million in annual sales, with a sharp 2020 pandemic surge, followed by a 45% decline by 2022, stabilizing above pre-pandemic levels. North America and EMEA remain the strongest markets, contributing 80% of sales, while APAC and LATAM showed volatility despite rapid growth in 2020. Laptop sales, particularly MacBooks and ThinkPads, surged during the pandemic but have since slowed. The loyalty program has boosted customer engagement and revenue but has lost momentum post-pandemic.
 
 To maintain growth, ByteX should focus on expanding its top-performing products, optimizing the loyalty program, and prioritizing North America and EMEA. Additional opportunities include stabilizing APAC and LATAM markets, improving refund rates, and expanding affiliate marketing.
 
